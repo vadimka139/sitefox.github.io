@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Тарасов Вадим - Навигация</title>
+<link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+<div style="padding: 20px;">
+    <h3>Навигация по проекту</h3>
+    <ul id="navigation" style="list-style-type: none; padding-left: 0;">
+        <li><a href="#" onclick="openMenu(this);return false" style="text-decoration: none; color: #4444cc; font-weight: bold;">▼ Содержание проекта</a>
+            <ul style="display: none; padding-left: 20px; margin-top: 10px;">
+                <li><a href="index.html">● Главная страница</a></li>
+                <li><a href="2.html">● Страница с таблицей</a></li>
+                <li><a href="3.html">● Страница с формой</a></li>
+                <li><a href="5.html">● Интерактивный слайдер</a></li>
+            </ul>
+        </li>
+    </ul> 
+</div>
+<script>
+function openMenu(node){
+    var subMenu = node.parentNode.getElementsByTagName("ul")[0];
+    if(subMenu.style.display == "none" || subMenu.style.display == "") {
+        subMenu.style.display = "block";
+        node.innerHTML = "▲ Содержание проекта";
+    } else {
+        subMenu.style.display = "none";
+        node.innerHTML = "▼ Содержание проекта";
+    }
+}
+</script>
+</body>
+</html>
